@@ -1,0 +1,130 @@
+:root {
+    --black: #333333;
+    --gray: #737b80;
+    --beige: #e9e9e0;
+}
+
+@font-face {
+    font-family: CoGA;
+    src: url(./assets/fonts/CormorantGaramond-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: CoGa;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--gray);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    max-width: 1440px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: var(--beige);
+    width: 80vw;
+    min-height: 80vh;
+}
+
+/* Header */
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h1 span {
+    font-size: 3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-color: var(--black);
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+
+/* Main */
+
+.mainContainer {
+    display: flex;
+    padding: 0 3vw;
+}
+
+.mainLeft {
+    max-width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 2vw;
+    padding-top: 2vw;
+}
+.mainItem img {
+    max-height: 75%;
+}
+
+.mainItem:nth-of-type(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+.sideBar {
+    max-width: 25%;
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    gap: 1vw;
+    padding: 0 3vw;
+}
+
+.sideBar > p {
+    font-size: 1.17rem;
+    text-align: center;
+    padding: 1.25rem 0 1rem 0;
+    margin-top: -3vw;
+}
+
+.sideBar .childItem {
+    border: 4px solid var(--black);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideBar .childItem:nth-of-type(1) {
+    font-size: 4rem;
+
+    padding: 1.5625rem 3rem;
+}
+
+.sideBar .childItem:nth-of-type(2),
+.sideBar .childItem:nth-of-type(3) {
+    padding: 1rem;
+}
+
+.sideBar .childItem:nth-of-type(3) {
+    padding: 1.5rem;
+}
